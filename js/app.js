@@ -6,9 +6,9 @@ var url = window.location.href;
 var swLocation = '/twittor/sw.js';
 
 // Registro del SW y esto es correcto cuando la aplicacion se encuentre enla raiz del sitio
-if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw.js');
-}
+// if (navigator.serviceWorker) {
+//     navigator.serviceWorker.register('/sw.js');
+// }
 
 // registro del SW cuando se encuentre en una carpeta que no sea la raiz
 if (navigator.serviceWorker) {
