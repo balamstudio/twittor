@@ -6,8 +6,11 @@ const STATIC_CACHE = 'static-v2';
 const DYNAMIC_CACHE = 'dynamic-v1';
 const INMUTABLE_CACHE = 'inmutable-v1';
 
+
+// Cuando tengamos nuestra app en un sitio que no sea la raiz 
+// no debemos dejar el '/', y lo comentamos 
 const APP_SHELL = [
-    '/',
+    // '/',
     'index.html',
     'css/style.css',
     'img/favicon.ico',

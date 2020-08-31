@@ -1,7 +1,24 @@
-// Registro del SW
+// Obtenemos el URL de la aplicacion
+var url = window.location.href;
+// Indicamos la ubicacion del SW cpn respecto a la raiz
+// Por ejemplo el sitio subido a github esta en la direccion
+// https://balamstudio.github.io/twittor/
+var swLocation = '/twittor/sw.js';
+
+// Registro del SW y esto es correcto cuando la aplicacion se encuentre enla raiz del sitio
 if (navigator.serviceWorker) {
     navigator.serviceWorker.register('/sw.js');
 }
+
+// registro del SW cuando se encuentre en una carpeta que no sea la raiz
+if (navigator.serviceWorker) {
+    if (url.includes('localhost')) {
+        swLocation = '/sw.js';
+    }
+    navigator.serviceWorker.register(swLocation);
+}
+
+
 
 // Referencias de jQuery
 
